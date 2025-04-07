@@ -1,0 +1,24 @@
+.taskList {
+  margin-top: 1.5rem;
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  color: #6b7280;
+}
+
+.emptyIcon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  color: #d1d5db;
+}
+
+.emptyText {
+  font-size: 1.125rem;
+  margin: 0;
+}
