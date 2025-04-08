@@ -20,7 +20,7 @@ export const useTasks = () => {
         setTasks(data);
         setError(null);
       } catch (err) {
-        setError('Не вдалося завантажити завдання');
+        setError("Failed to load task");
         console.error(err);
       } finally {
         setIsLoading(false);
@@ -36,7 +36,7 @@ export const useTasks = () => {
       const newTask = await createTask(task);
       setTasks(prevTasks => [...prevTasks, newTask]);
     } catch (err) {
-      setError('Не вдалося додати завдання');
+      setError("Failed to add task");
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -53,7 +53,7 @@ export const useTasks = () => {
         )
       );
     } catch (err) {
-      setError('Не вдалося оновити завдання');
+      setError("Failed to update task");
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -66,7 +66,7 @@ export const useTasks = () => {
       await apiDeleteTask(id);
       setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
     } catch (err) {
-      setError('Не вдалося видалити завдання');
+      setError("Failed to delete task");
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -85,7 +85,7 @@ export const useTasks = () => {
         )
       );
     } catch (err) {
-      setError('Не вдалося оновити статус завдання');
+      setError("Failed to update task status");
       console.error(err);
     }
   };
